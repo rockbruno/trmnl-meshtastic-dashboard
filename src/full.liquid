@@ -37,15 +37,14 @@
       <div class="mesh-card h--full rounded lg:rounded--medium">
         <div class="mesh-card__heading gap--distribute px--2 py--1 lg:px--4 lg:py--2">
           <span class="title title--small lg:title--base">RADIO HEALTH</span>
-          <span class="label label--small lg:label--base">{{ node.channel }}</span>
+          <span class="label label--small lg:label--base"></span>
         </div>
-        <div class="p--2 lg:p--4">
+        <div class="mesh-radio-health p--2 lg:p--4">
           <div class="mesh-stat-row gap--distribute py--1 lg:py--2"><span class="title title--small">Channel utilization</span><span class="label">{{ node.metrics.channel_utilization }}%</span></div>
           <div class="mesh-meter rounded--full mt--1 mb--2"><div class="mesh-meter__fill" style="width: {{ node.metrics.channel_utilization }}%"></div></div>
           <div class="mesh-stat-row gap--distribute py--1 lg:py--2"><span class="title title--small">Air utilization TX</span><span class="label">{{ node.metrics.air_util_tx }}%</span></div>
           <div class="mesh-meter rounded--full mt--1 mb--2"><div class="mesh-meter__fill" style="width: {{ node.metrics.air_util_tx }}%"></div></div>
           <div class="mesh-stat-row gap--distribute py--1 lg:py--2"><span class="title title--small">Direct neighbors</span><span class="label">{{ node.metrics.neighbor_count }}</span></div>
-          <div class="mesh-stat-row gap--distribute py--1 lg:py--2"><span class="title title--small">Last contact</span><span class="label">{{ node.last_contact }}</span></div>
         </div>
       </div>
     </div>
@@ -54,7 +53,6 @@
       <div class="mesh-card h--full rounded lg:rounded--medium">
         <div class="mesh-card__heading gap--distribute px--2 py--1 lg:px--4 lg:py--2">
           <span class="title title--small lg:title--base">MESH TRAFFIC</span>
-          <span class="label label--small lg:label--base">SINCE BOOT</span>
         </div>
         <div class="p--2 lg:p--4">
           <div class="grid grid--cols-3 gap--small mb--2">
@@ -73,6 +71,6 @@
 </div>
 
 <div class="title_bar">
-  <span class="title">{{ trmnl.plugin_settings.instance_name }}</span>
-  <span class="instance">MQTT via Home Assistant</span>
+  <span class="title">Meshtastic Metrics</span>
+  <span class="instance">{{ trmnl.plugin_settings.instance_name }}</span>
 </div>
