@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Meshtastic logo</title>
+  <defs>
+    <clipPath id="rounded-corners">
+      <rect width="512" height="512" rx="64" ry="64" />
+    </clipPath>
+  </defs>
+  <g clip-path="url(#rounded-corners)">
+    <path fill="#67ea94" d="M0 0h512v512H0z" />
+    <g transform="matrix(1.79 0 0 1.79 313.74 258.36)">
+      <path fill="#2c2d3c" fill-rule="evenodd" transform="translate(-250.97 -362.41)" d="M250.908 330.267 193.126 415.005 180.938 406.694 244.802 313.037a7.374 7.374 0 0 1 6.087-3.221 7.374 7.374 0 0 1 6.093 3.21l64.012 93.51-12.173 8.333-57.913-84.602Z" />
+    </g>
+    <g transform="matrix(1.81 0 0 1.81 145 256.15)">
+      <path fill="#2c2d3c" fill-rule="evenodd" transform="translate(-115.14 -528.06)" d="m87.642 581.398 67.115-98.421-12.119-8.264-67.115 98.421 12.119 8.264Z" />
+    </g>
+  </g>
+</svg>
