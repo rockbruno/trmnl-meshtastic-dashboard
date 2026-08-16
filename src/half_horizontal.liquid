@@ -1,7 +1,7 @@
 <div class="layout layout--col gap--small mesh-compact">
   <div class="mesh-header gap--distribute pb--2">
     <div class="mesh-identity">
-      <div class="mesh-mark rounded--full">M</div>
+      {{ meshtastic_logo }}
       <div><div class="title">{{ node.name }}</div><div class="label">{{ node.id }} &middot; contact {{ node.last_contact }}</div></div>
     </div>
     <div class="mesh-badge rounded--full px--2 py--1">{{ node.channel }}</div>

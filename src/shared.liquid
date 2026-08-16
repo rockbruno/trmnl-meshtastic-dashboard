@@ -1,3 +1,22 @@
+{% capture meshtastic_logo %}
+<svg class="mesh-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Meshtastic">
+  <defs>
+    <clipPath id="mesh-logo-corners">
+      <rect width="512" height="512" rx="64" ry="64" />
+    </clipPath>
+  </defs>
+  <g clip-path="url(#mesh-logo-corners)">
+    <path fill="#67ea94" d="M0 0h512v512H0z" />
+    <g transform="matrix(1.79 0 0 1.79 313.74 258.36)">
+      <path fill="#2c2d3c" fill-rule="evenodd" transform="translate(-250.97 -362.41)" d="M250.908 330.267 193.126 415.005 180.938 406.694 244.802 313.037a7.374 7.374 0 0 1 6.087-3.221 7.374 7.374 0 0 1 6.093 3.21l64.012 93.51-12.173 8.333-57.913-84.602Z" />
+    </g>
+    <g transform="matrix(1.81 0 0 1.81 145 256.15)">
+      <path fill="#2c2d3c" fill-rule="evenodd" transform="translate(-115.14 -528.06)" d="m87.642 581.398 67.115-98.421-12.119-8.264-67.115 98.421 12.119 8.264Z" />
+    </g>
+  </g>
+</svg>
+{% endcapture %}
+
 <style>
   .mesh-header {
     display: flex;
@@ -11,13 +30,10 @@
     gap: 12px;
   }
 
-  .mesh-mark {
+  .mesh-logo {
     width: 44px;
     height: 44px;
-    display: grid;
-    place-items: center;
-    border: 3px solid #000;
-    font: 700 26px/1 sans-serif;
+    display: block;
   }
 
   .mesh-badge {
@@ -85,7 +101,7 @@
   }
 
   .screen--lg .mesh-header { border-bottom-width: 4px; }
-  .screen--lg .mesh-mark { width: 64px; height: 64px; font: 700 38px/1 sans-serif; border-width: 4px; }
+  .screen--lg .mesh-logo { width: 64px; height: 64px; }
   .screen--lg .mesh-badge { font: 700 18px/1 sans-serif; border-width: 3px; }
   .screen--lg .mesh-kpi { border-width: 3px; }
   .screen--lg .mesh-kpi__value { font: 700 43px/.95 sans-serif; }
