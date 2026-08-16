@@ -1,0 +1,38 @@
+# TRMNLP configuration
+# {{ env.VARIABLE }} interpolation is available here
+---
+# auto-reload when files change (`watch: false` to disable)
+watch:
+  - .trmnlp.yml
+  - src
+
+# values of custom fields (defined in src/settings.yml)
+custom_fields: {}
+
+# override variables
+variables:
+  node:
+    name: BEDROOM NODE
+    id: "!a35c44d8"
+    area: EU_868
+    channel: MEDIUMFAST
+    last_contact: "2026-08-16 15:31"
+    uptime: 6 days
+    latest_message:
+      from: "!9e12f0ab"
+      text: Arrived at the trailhead. Signal is good.
+    metrics:
+      channel_utilization: 12.42
+      air_util_tx: 3.18
+      nodes_online: 18
+      packets_received: 1248
+      packets_sent: 386
+      packets_relayed: 74
+      neighbor_count: 7
+  trmnl:
+    device:
+      width: 1040
+      height: 780
+      color_depth: 4
+    plugin_settings:
+      instance_name: Bedroom Mesh

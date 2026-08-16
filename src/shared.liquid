@@ -1,0 +1,129 @@
+<style>
+  .mesh-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #000;
+  }
+
+  .mesh-identity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .mesh-mark {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border: 3px solid #000;
+    border-radius: 50%;
+    font-size: 26px;
+    line-height: 1;
+    font-weight: 700;
+  }
+
+  .mesh-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 10px;
+    border: 2px solid #000;
+    border-radius: 99px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .08em;
+  }
+
+  .mesh-card {
+    border: 2px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .mesh-card__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 10px;
+    border-bottom: 2px solid #000;
+    background: #000;
+    color: #fff;
+  }
+
+  .mesh-card__body { padding: 10px; }
+
+  .mesh-kpi {
+    padding: 10px 12px;
+    border: 2px solid #000;
+    border-radius: 9px;
+  }
+
+  .mesh-kpi__value {
+    display: block;
+    font-size: 32px;
+    line-height: .95;
+    font-weight: 700;
+  }
+
+  .mesh-meter {
+    height: 13px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .mesh-meter__fill { height: 100%; background: #000; }
+
+  .mesh-stat-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 6px 0;
+    border-bottom: 1px solid #000;
+  }
+
+  .mesh-stat-row:last-child { border-bottom: 0; }
+
+  .mesh-big-number {
+    font-size: 64px;
+    line-height: .85;
+    font-weight: 700;
+    letter-spacing: -.05em;
+  }
+
+  .mesh-compact .mesh-big-number { font-size: 46px; }
+  .mesh-compact .mesh-kpi__value { font-size: 25px; }
+
+  .mesh-message {
+    padding: 12px;
+    border-left: 6px solid #000;
+    background: repeating-linear-gradient(-45deg, #fff, #fff 5px, #eee 5px, #eee 6px);
+  }
+
+  .mesh-message__text {
+    display: block;
+    font-size: 20px;
+    line-height: 1.15;
+    font-weight: 600;
+  }
+
+  /* TRMNL X is a semantic lg / 4-bit device (1040x780 CSS pixels). */
+  .screen--lg .mesh-header { padding-bottom: 18px; border-bottom-width: 4px; }
+  .screen--lg .mesh-mark { width: 64px; height: 64px; font-size: 38px; border-width: 4px; }
+  .screen--lg .mesh-badge { padding: 8px 15px; font-size: 18px; border-width: 3px; }
+  .screen--lg .mesh-kpi { padding: 18px; border-width: 3px; border-radius: 14px; }
+  .screen--lg .mesh-kpi__value { font-size: 43px; margin: 4px 0; }
+  .screen--lg .mesh-card { border-width: 3px; border-radius: 14px; }
+  .screen--lg .mesh-card__heading { padding: 12px 18px; border-bottom-width: 3px; }
+  .screen--lg .mesh-card__body { padding: 18px; }
+  .screen--lg .mesh-stat-row { padding: 10px 0; }
+  .screen--lg .mesh-big-number { font-size: 82px; }
+  .screen--lg .mesh-message { padding: 18px; border-left-width: 9px; }
+  .screen--lg .mesh-message__text { font-size: 27px; margin-top: 4px; }
+  .screen--4bit .mesh-kpi { background: #f1f1f1; }
+  .screen--4bit .mesh-message { background: #e5e5e5; }
+</style>
