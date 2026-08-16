@@ -1,24 +1,16 @@
 <div class="layout layout--col gap--small mesh-compact">
-  <div class="mesh-header">
+  <div class="mesh-header gap--distribute pb--2">
     <div class="mesh-identity">
-      <div class="mesh-mark">M</div>
-      <div>
-        <div class="title">{{ node.name }}</div>
-        <div class="label">{{ node.id }} &middot; contact {{ node.last_contact }}</div>
-      </div>
+      <div class="mesh-mark rounded--full">M</div>
+      <div><div class="title">{{ node.name }}</div><div class="label">{{ node.id }} &middot; contact {{ node.last_contact }}</div></div>
     </div>
-    <div class="mesh-badge">{{ node.channel }}</div>
+    <div class="mesh-badge rounded--full px--2 py--1">{{ node.channel }}</div>
   </div>
-
   <div class="grid grid--cols-4 gap--small">
-    <div class="mesh-kpi"><span class="label label--small">ONLINE NODES</span><span class="mesh-kpi__value">{{ node.metrics.nodes_online }}</span></div>
-    <div class="mesh-kpi"><span class="label label--small">NEIGHBORS</span><span class="mesh-kpi__value">{{ node.metrics.neighbor_count }}</span></div>
-    <div class="mesh-kpi"><span class="label label--small">RX / TX</span><span class="mesh-kpi__value">{{ node.metrics.packets_received }} / {{ node.metrics.packets_sent }}</span></div>
-    <div class="mesh-kpi"><span class="label label--small">RELAYED</span><span class="mesh-kpi__value">{{ node.metrics.packets_relayed }}</span><span class="label">packets</span></div>
+    <div class="mesh-kpi p--2 rounded"><span class="label label--small">ONLINE NODES</span><span class="mesh-kpi__value">{{ node.metrics.nodes_online }}</span></div>
+    <div class="mesh-kpi p--2 rounded"><span class="label label--small">NEIGHBORS</span><span class="mesh-kpi__value">{{ node.metrics.neighbor_count }}</span></div>
+    <div class="mesh-kpi p--2 rounded"><span class="label label--small">RX / TX</span><span class="mesh-kpi__value">{{ node.metrics.packets_received }} / {{ node.metrics.packets_sent }}</span></div>
+    <div class="mesh-kpi p--2 rounded"><span class="label label--small">RELAYED</span><span class="mesh-kpi__value">{{ node.metrics.packets_relayed }}</span><span class="label">packets</span></div>
   </div>
 </div>
-
-<div class="title_bar">
-  <span class="title">{{ trmnl.plugin_settings.instance_name }}</span>
-  <span class="instance">Ch {{ node.metrics.channel_utilization }}% &middot; Air TX {{ node.metrics.air_util_tx }}% &middot; {{ node.uptime }} uptime</span>
-</div>
+<div class="title_bar"><span class="title">{{ trmnl.plugin_settings.instance_name }}</span><span class="instance">Ch {{ node.metrics.channel_utilization }}% &middot; Air TX {{ node.metrics.air_util_tx }}% &middot; {{ node.uptime }}</span></div>

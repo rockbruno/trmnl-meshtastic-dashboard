@@ -1,7 +1,7 @@
 <div class="layout layout--col gap--medium lg:gap--xlarge">
-  <div class="mesh-header">
+  <div class="mesh-header gap--distribute pb--3 lg:pb--5">
     <div class="mesh-identity">
-      <div class="mesh-mark">M</div>
+      <div class="mesh-mark rounded--full">M</div>
       <div>
         <div class="title title--large lg:title--xxlarge">{{ node.name }}</div>
         <div class="label lg:label--large">{{ node.id }} &middot; {{ node.area }} &middot; {{ node.channel }}</div>
@@ -10,22 +10,22 @@
   </div>
 
   <div class="grid grid--cols-4 gap--small lg:gap--medium">
-    <div class="mesh-kpi">
+    <div class="mesh-kpi p--2 lg:p--4 rounded lg:rounded--medium">
       <span class="label label--small">ONLINE NODES</span>
       <span class="mesh-kpi__value">{{ node.metrics.nodes_online }}</span>
       <span class="label">visible now</span>
     </div>
-    <div class="mesh-kpi">
+    <div class="mesh-kpi p--2 lg:p--4 rounded lg:rounded--medium">
       <span class="label label--small">NEIGHBORS</span>
       <span class="mesh-kpi__value">{{ node.metrics.neighbor_count }}</span>
       <span class="label">direct peers</span>
     </div>
-    <div class="mesh-kpi">
+    <div class="mesh-kpi p--2 lg:p--4 rounded lg:rounded--medium">
       <span class="label label--small">UPTIME</span>
       <span class="mesh-kpi__value">{{ node.uptime }}</span>
       <span class="label">since last reboot</span>
     </div>
-    <div class="mesh-kpi">
+    <div class="mesh-kpi p--2 lg:p--4 rounded lg:rounded--medium">
       <span class="label label--small">LAST CONTACT</span>
       <span class="mesh-kpi__value">{{ node.last_contact | slice: 11, 5 }}</span>
       <span class="label">{{ node.last_contact | slice: 0, 10 }}</span>
@@ -34,49 +34,37 @@
 
   <div class="columns gap--medium lg:gap--xlarge">
     <div class="column">
-      <div class="mesh-card h--full">
-        <div class="mesh-card__heading">
+      <div class="mesh-card h--full rounded lg:rounded--medium">
+        <div class="mesh-card__heading gap--distribute px--2 py--1 lg:px--4 lg:py--2">
           <span class="title title--small lg:title--base">RADIO HEALTH</span>
           <span class="label label--small lg:label--base">{{ node.channel }}</span>
         </div>
-        <div class="mesh-card__body">
-          <div class="mesh-stat-row"><span class="title title--small">Channel utilization</span><span class="label">{{ node.metrics.channel_utilization }}%</span></div>
-          <div class="mesh-meter mt--1 mb--2"><div class="mesh-meter__fill" style="width: {{ node.metrics.channel_utilization }}%"></div></div>
-          <div class="mesh-stat-row"><span class="title title--small">Air utilization TX</span><span class="label">{{ node.metrics.air_util_tx }}%</span></div>
-          <div class="mesh-meter mt--1 mb--2"><div class="mesh-meter__fill" style="width: {{ node.metrics.air_util_tx }}%"></div></div>
-          <div class="mesh-stat-row"><span class="title title--small">Direct neighbors</span><span class="label">{{ node.metrics.neighbor_count }}</span></div>
-          <div class="mesh-stat-row"><span class="title title--small">Last contact</span><span class="label">{{ node.last_contact }}</span></div>
+        <div class="p--2 lg:p--4">
+          <div class="mesh-stat-row gap--distribute py--1 lg:py--2"><span class="title title--small">Channel utilization</span><span class="label">{{ node.metrics.channel_utilization }}%</span></div>
+          <div class="mesh-meter rounded--full mt--1 mb--2"><div class="mesh-meter__fill" style="width: {{ node.metrics.channel_utilization }}%"></div></div>
+          <div class="mesh-stat-row gap--distribute py--1 lg:py--2"><span class="title title--small">Air utilization TX</span><span class="label">{{ node.metrics.air_util_tx }}%</span></div>
+          <div class="mesh-meter rounded--full mt--1 mb--2"><div class="mesh-meter__fill" style="width: {{ node.metrics.air_util_tx }}%"></div></div>
+          <div class="mesh-stat-row gap--distribute py--1 lg:py--2"><span class="title title--small">Direct neighbors</span><span class="label">{{ node.metrics.neighbor_count }}</span></div>
+          <div class="mesh-stat-row gap--distribute py--1 lg:py--2"><span class="title title--small">Last contact</span><span class="label">{{ node.last_contact }}</span></div>
         </div>
       </div>
     </div>
 
     <div class="column">
-      <div class="mesh-card h--full">
-        <div class="mesh-card__heading">
+      <div class="mesh-card h--full rounded lg:rounded--medium">
+        <div class="mesh-card__heading gap--distribute px--2 py--1 lg:px--4 lg:py--2">
           <span class="title title--small lg:title--base">MESH TRAFFIC</span>
           <span class="label label--small lg:label--base">SINCE BOOT</span>
         </div>
-        <div class="mesh-card__body">
+        <div class="p--2 lg:p--4">
           <div class="grid grid--cols-3 gap--small mb--2">
-            <div>
-              <span class="label label--small">RECEIVED</span>
-              <div class="mesh-big-number">{{ node.metrics.packets_received }}</div>
-              <span class="label">packets</span>
-            </div>
-            <div>
-              <span class="label label--small">SENT</span>
-              <div class="mesh-big-number">{{ node.metrics.packets_sent }}</div>
-              <span class="label">packets</span>
-            </div>
-            <div>
-              <span class="label label--small">RELAYED</span>
-              <div class="mesh-big-number">{{ node.metrics.packets_relayed }}</div>
-              <span class="label">packets</span>
-            </div>
+            <div><span class="label label--small">RECEIVED</span><div class="mesh-big-number">{{ node.metrics.packets_received }}</div><span class="label">packets</span></div>
+            <div><span class="label label--small">SENT</span><div class="mesh-big-number">{{ node.metrics.packets_sent }}</div><span class="label">packets</span></div>
+            <div><span class="label label--small">RELAYED</span><div class="mesh-big-number">{{ node.metrics.packets_relayed }}</div><span class="label">packets</span></div>
           </div>
-          <div class="mesh-message">
+          <div class="mesh-message p--3 lg:p--4">
             <span class="label label--small">LATEST MESSAGE &middot; {{ node.latest_message.from }}</span>
-            <span class="mesh-message__text">{{ node.latest_message.text }}</span>
+            <span class="mesh-message__text mt--1">{{ node.latest_message.text }}</span>
           </div>
         </div>
       </div>

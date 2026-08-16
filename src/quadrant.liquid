@@ -1,28 +1,17 @@
 <div class="layout layout--col gap--small mesh-compact">
-  <div class="mesh-header">
-    <div>
-      <div class="label label--small">MESHTASTIC</div>
-      <div class="title">{{ node.name }}</div>
-    </div>
+  <div class="mesh-header gap--distribute pb--2">
+    <div><div class="label label--small">MESHTASTIC</div><div class="title">{{ node.name }}</div></div>
     <span class="label label--small">{{ node.channel }}</span>
   </div>
-
   <div class="grid grid--cols-2 gap--small">
-    <div class="mesh-kpi"><span class="label label--small">ONLINE NODES</span><span class="mesh-kpi__value">{{ node.metrics.nodes_online }}</span></div>
-    <div class="mesh-kpi"><span class="label label--small">NEIGHBORS</span><span class="mesh-kpi__value">{{ node.metrics.neighbor_count }}</span></div>
+    <div class="mesh-kpi p--2 rounded"><span class="label label--small">ONLINE NODES</span><span class="mesh-kpi__value">{{ node.metrics.nodes_online }}</span></div>
+    <div class="mesh-kpi p--2 rounded"><span class="label label--small">NEIGHBORS</span><span class="mesh-kpi__value">{{ node.metrics.neighbor_count }}</span></div>
   </div>
-
-  <div class="mesh-card">
-    <div class="mesh-card__body">
-      <div class="mesh-stat-row"><span class="title title--small">Channel</span><span class="label">{{ node.metrics.channel_utilization }}%</span></div>
-      <div class="mesh-stat-row"><span class="title title--small">Air TX</span><span class="label">{{ node.metrics.air_util_tx }}%</span></div>
-      <div class="mesh-stat-row"><span class="title title--small">RX / TX</span><span class="label">{{ node.metrics.packets_received }} / {{ node.metrics.packets_sent }}</span></div>
-      <div class="mesh-stat-row"><span class="title title--small">Relayed</span><span class="label">{{ node.metrics.packets_relayed }}</span></div>
-    </div>
-  </div>
+  <div class="mesh-card rounded"><div class="p--2">
+    <div class="mesh-stat-row gap--distribute py--1"><span class="title title--small">Channel</span><span class="label">{{ node.metrics.channel_utilization }}%</span></div>
+    <div class="mesh-stat-row gap--distribute py--1"><span class="title title--small">Air TX</span><span class="label">{{ node.metrics.air_util_tx }}%</span></div>
+    <div class="mesh-stat-row gap--distribute py--1"><span class="title title--small">RX / TX</span><span class="label">{{ node.metrics.packets_received }} / {{ node.metrics.packets_sent }}</span></div>
+    <div class="mesh-stat-row gap--distribute py--1"><span class="title title--small">Relayed</span><span class="label">{{ node.metrics.packets_relayed }}</span></div>
+  </div></div>
 </div>
-
-<div class="title_bar">
-  <span class="title">{{ trmnl.plugin_settings.instance_name }}</span>
-  <span class="instance">{{ node.id }}</span>
-</div>
+<div class="title_bar"><span class="title">{{ trmnl.plugin_settings.instance_name }}</span><span class="instance">{{ node.id }}</span></div>
